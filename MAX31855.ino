@@ -1,14 +1,11 @@
 #include <SPI.h>
-#include "max6675.h"
 #include "Adafruit_MAX31855.h"
 
 #define MAXDO   2
-#define MAXCS1  13  //MAX31855
-#define MAXCS2  4   //MAX6675
+#define MAXCS1  13  
 #define MAXCLK  18
 
 Adafruit_MAX31855 termopar_31855(MAXCLK, MAXCS1, MAXDO);
-MAX6675 termopar_6675(MAXCLK, MAXCS2, MAXDO);
 
 void setup() {
   Serial.begin(9600);
